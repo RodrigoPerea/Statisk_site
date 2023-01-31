@@ -1,0 +1,38 @@
+.noScroll {
+  overflow: hidden;
+}
+/* .udsolgt {
+    opacity
+}
+.rabat {
+    add banner+ tal i js
+}
+.nedsat {
+    add banner + tal i js
+}
+.discounted p:last-child {
+        background: var(--off-color);
+        padding: 0.2rem;
+      }
+
+ */
+
+.produkliste .udsolgt ::before {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.401);
+}
+
+.rabat p:last-child {
+  background-color: rgb(221, 10, 10);
+  padding: 0.1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  justify-content: space-between;
+  padding: 0.2rem;
+}
+
+.produkliste .produkt .rabat {
+  display: flex;
+  justify-content: space-between;
+}

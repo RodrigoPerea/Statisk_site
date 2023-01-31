@@ -10,6 +10,7 @@
 .produkt {
   display: flex;
   flex-direction: column;
+  margin-left: 1.5rem;
 }
 
 .produkt a {

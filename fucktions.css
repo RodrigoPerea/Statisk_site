@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-img:hover {
+.produkliste img:hover {
   opacity: 0.7;
   filter: drop-shadow(0 0 15px black);
   transform: scale(1.1);
@@ -20,11 +20,6 @@ img:hover {
   font-size: 1.1rem;
   justify-content: space-between;
   padding: 0.2rem;
-}
-
-.produkliste .produkt .rabat {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* UDSOLGT */
@@ -50,4 +45,83 @@ img:hover {
   color: #f15c60;
   font-size: 20px;
   transform: rotate(15deg) translateY(15px);
+}
+
+/* Category */
+.category_style:hover {
+  opacity: 0.9;
+  filter: drop-shadow(0 0 15px rgb(0, 0, 0));
+  transform: scale(1.1);
+}
+
+/* søgefelt test */
+
+.s_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-top: 50px;
+}
+
+form.s_test input[type="text"] {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid grey;
+  max-width: 70%;
+  background: #f1f1f1;
+}
+
+form.s_test button {
+  float: left;
+  width: 20%;
+  padding: 9px;
+  background: #ba0e5ee4;
+  color: white;
+  font-size: 17px;
+  border: 0.5px solid rgba(113, 113, 113, 0.108);
+  border-left: none;
+  cursor: pointer;
+}
+
+form.s_test button:hover {
+  background: #0b7dda;
+}
+
+form.s_test::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* produkt sortering på produkt liste */
+
+/* for sjov */
+.product-filter {
+  display: flex;
+  padding: 30px 0 20px 20px;
+  align-items: flex-end;
+}
+.collection-sort select {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 2px solid rgb(44, 44, 44);
+}
+.collection-sort .sort {
+  display: flex;
+}
+.collection-sort label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.collection-sort {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-sort:first-child {
+  padding-right: 20px;
 }

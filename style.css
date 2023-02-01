@@ -19,7 +19,7 @@
   margin-left: 1.5rem;
 }
 
-.produkt a {
+.read_more {
   font-size: 1.2rem;
   font-weight: 500;
   border: 1px solid blue;
@@ -34,6 +34,138 @@
 
 /* category */
 
-.category {
+.category_page main {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  gap: 2rem;
+}
+
+.category_page {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 0.5rem;
+  margin-left: 1.5rem;
+  margin-top: 30px;
+}
+@media (min-width: 718px) {
+  .category_page {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+  }
+  .category_style {
+    max-width: 700px;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1260px) {
+  .category_page {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+  }
+  .category_style {
+    max-width: 900px;
+  }
+}
+
+.category p {
+  color: rgb(23, 23, 23);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.category_page .category_style {
+  /*   background-color: rgba(31, 31, 31, 0.617); */
+  max-width: 680px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 50px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* produktsite */
+.product_site {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 30px 20px 30px 20px;
+}
+
+.product_site img {
+  max-width: 400px;
+}
+.aditional_info .rabat {
+  max-width: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* fold ud menu : produkt eksperiment*/
+
+.folder_menu {
+  color: black;
+  border: none;
+
+  cursor: pointer;
+  padding: 18px;
+  width: 93%;
+  text-align: left;
+
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.folder_menu:hover {
+  border: 1px solid blue;
+}
+
+.info_folder {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  padding: 20px 18px;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.folder_menu:after {
+  content: "\02795"; /* kode to plus */
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* minus */
+}
+.aditional_info h2 {
+  margin: 25px 0 5px 0;
+}
+.aditional_info h4 {
+  margin: 5px 0 15px 0;
+}
+.aditional_info h6 {
+  margin: 5px 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: rgb(38, 38, 38);
+}
+.aditional_info p {
+  margin: 5px 0 20px 0;
+}
+.aditional_info .bolded {
+  font-weight: 700;
+}
+button.folder_menu {
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+@media (min-width: 700px) {
+  .product_site {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px 20px 30px 20px;
+  }
+  .folder_menu {
+    margin-top: 30px;
+  }
 }

@@ -1,21 +1,6 @@
 .noScroll {
   overflow: hidden;
 }
-/* .udsolgt {
-    opacity
-}
-.rabat {
-    add banner+ tal i js
-}
-.nedsat {
-    add banner + tal i js
-}
-.discounted p:last-child {
-        background: var(--off-color);
-        padding: 0.2rem;
-      }
-
- */
 
 .produkliste img {
   cursor: pointer;
@@ -26,17 +11,6 @@ img:hover {
   filter: drop-shadow(0 0 15px black);
   transform: scale(1.1);
 }
-
-/* .produkliste .udsolgt {
-  opacity: 0.2;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.401);
-} */
-/* .produkliste .udsolgt:hover {
-  opacity: 0.2;
-  filter: none;
-  transform: none;
-} */
 
 .rabat p:last-child {
   background-color: rgb(221, 10, 10);

@@ -12,7 +12,7 @@
   transform: scale(1.1);
 }
 
-.rabat p:last-child {
+.pris .rabat p:last-child {
   background-color: rgb(221, 10, 10);
   padding: 0.1rem;
   color: white;
@@ -20,6 +20,9 @@
   font-size: 1.1rem;
   justify-content: space-between;
   padding: 0.2rem;
+  max-width: 25%;
+  text-align: center;
+  margin: 5px 0 10px 0;
 }
 
 /* UDSOLGT */

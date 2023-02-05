@@ -26,9 +26,10 @@
 }
 
 /* UDSOLGT */
-.udsolgt img {
+/* .udsolgt img {
   opacity: 0.4;
-}
+} */
+
 .udsolgt img:hover {
   opacity: 0.4;
   filter: none;
@@ -37,7 +38,7 @@
 .udsolgt a {
   display: none;
 }
-.udsolgt_wrapper {
+.sold-out p {
   display: flex;
   flex-direction: column;
   justify-content: center;

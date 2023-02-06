@@ -6,9 +6,7 @@ async function getData() {
 
   const data = await response.json();
   console.log(data);
-
   // 2. loope  // 3. for hver
-
   data.forEach(showProduct); //loope
 }
 getData();

@@ -2,7 +2,7 @@
 
 // 1. hente data
 async function getData() {
-  const response = await fetch("https://kea-alt-del.dk/t7/api/products?limit=10 "); //hentet data
+  const response = await fetch("https://kea-alt-del.dk/t7/api/products?limit=500 "); //hentet data
 
   const data = await response.json();
   console.log(data);
@@ -23,18 +23,21 @@ function showProduct(product) {
   const copy = template.cloneNode(true);
   // 6. skifte data
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  copy.querySelector("img").alt = product.productdisplayname;
   copy.querySelector("h2").textContent = product.brandname;
   copy.querySelector(".pris").textContent = product.price;
   /* copy.querySelector(".produkt .pris").textContent = Math.floor(product.price - (product.price / 100) * product.discount); */
-  copy.querySelector(".under_line p").textContent = product.productdisplaynam;
+  copy.querySelector(".under_line p").textContent = product.productdisplayname;
 
   if (product.soldout > 0) {
     copy.querySelector(".produkt").classList.add("udsolgt");
+    /* copy.querySelector(".read_more").classList.add("gem"); */
   }
 
   if (product.discount > 0) {
-    copy.querySelector(".produkt").classList.add("rabatProcent");
+    copy.querySelector(".rabatProcent").textContent = product.discount;
     copy.querySelector(".newPrice").textContent = Math.floor(product.price - (product.price / 100) * product.discount);
+    copy.querySelector(".pris").style.textDecoration = "line-through red";
   }
   // 7. appende (tilføje til dommen)
   document.querySelector("main").appendChild(copy);

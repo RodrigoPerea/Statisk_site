@@ -27,12 +27,26 @@
 
 /* UDSOLGT */
 
+.rabatProcent::before {
+  content: " ";
+  width: 25%;
+  height: 25%;
+  background-color: rgb(109, 4, 4);
+}
+.rabatProcent::after {
+  content: " ";
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
 .udsolgt::before {
   content: " ";
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(145, 145, 145, 0.528);
+  background-color: rgba(145, 145, 145, 0.434);
   /*   z-index: 2000;
   filter: none;
   transform: none;

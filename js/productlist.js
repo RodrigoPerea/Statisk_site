@@ -32,16 +32,15 @@ function showProduct(product) {
   }
 
   if (product.discount) {
-    copy.querySelector(".produkt").classList.add("rabat");
+    copy.querySelector(".produkt").classList.add(".rabatProcent");
+
+    //Berging
+    let currentPrice = Number(document.querySelector.price);
+    let discount = Number(document.querySelector.discount);
+    let totalValue = currentPrice * (discount / 100);
+    copy.querySelector(".produkt .newPrice").Number = product.totalValue;
   }
 
-  /*  function newPriceDiscount() {
-    let currentPrice = Number(document.querySelector.price).value;
-    let discounValue = Number(document.querySelector.discount).value;
-    let totalValue = currentPrice * (discounValue / 100);
-    document.querySelector(".produkt .newPrice ").textContent = product.totalValue;
-    console.log(newTotalPrice);
-  } */
   // 7. appende (tilføje til dommen)
   document.querySelector("main").appendChild(copy);
 }

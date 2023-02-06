@@ -27,12 +27,13 @@ function showProduct(product) {
   copy.querySelector(".produkt .pris").textContent = product.price;
   copy.querySelector(".under_line p").textContent = product.productdisplaynam;
 
-  if (product.soldout) {
-    copy.querySelector(".produkt").classList.add("udsolgt");
+  if (product.soldout > 0) {
+    copy.classList.add("udsolgt");
   }
 
   if (product.discount) {
     copy.querySelector(".produkt").classList.add(".rabatProcent");
+    /* copy.querySelector(".produkt").classList.add(".rabatProcent"); */
 
     //Berging
     let currentPrice = Number(document.querySelector.price);

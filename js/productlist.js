@@ -25,18 +25,21 @@ function showProduct(product) {
   copy.querySelector("h2").textContent = product.brandname;
   copy.querySelector(".produkt .pris").textContent = product.price;
 
-  if (product.soldout) copy.querySelector(".produkt").classList.add("rabat");
-  if (product.discount) {
-    copy.querySelector(".produkt").classList.add("SouldOut_test");
+  if (product.soldout) {
+    copy.querySelector(".produkt").classList.add("udsolgt");
   }
 
-  function newPriceDiscount() {
+  if (product.discount) {
+    copy.querySelector(".produkt").classList.add("rabat");
+  }
+
+  /*  function newPriceDiscount() {
     let currentPrice = Number(document.querySelector.price).value;
     let discounValue = Number(document.querySelector.discount).value;
     let totalValue = currentPrice * (discounValue / 100);
     document.querySelector(".produkt .newPrice ").textContent = product.totalValue;
     console.log(newTotalPrice);
-  }
+  } */
   // 7. appende (tilføje til dommen)
   document.querySelector("main").appendChild(copy);
 }

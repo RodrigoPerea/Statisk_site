@@ -14,7 +14,7 @@ function showProduct(product) {
   document.querySelector(".aditional_info h6").textContent = product.price;
   document.querySelector(".rabat p").textContent = product.discount;
   document.querySelector(".aditional_info .basecolour").textContent = product.basecolour;
-  document.querySelector(".info_folder .description").textContent = product.description;
+  document.querySelector(".info_folder .description").innerHTML = product.description;
   document.querySelector(".info_folder .product_id").textContent = product.id;
   document.querySelector(".info_folder .material_wasning").textContent = product.materialcaredesc;
   document.querySelector(".info_folder .gender").textContent = product.gender;

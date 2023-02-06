@@ -29,8 +29,8 @@
 
 .rabatProcent::before {
   content: "-";
-  width: 25%;
-  height: 25%;
+  /*   width: 25%;
+  height: 25%; */
   background-color: rgb(109, 4, 4);
 }
 .rabatProcent::after {
@@ -39,6 +39,15 @@
   color: white;
   text-align: center;
   font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  border: 3px solid #f15c60;
+  border-radius: 10px;
+  color: #f15c60;
 }
 
 .udsolgt::before {

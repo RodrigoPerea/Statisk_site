@@ -35,17 +35,10 @@ function showProduct(product) {
   if (product.discount > 0) {
     copy.querySelector(".produkt").classList.add("rabatProcent");
     copy.querySelector(".newPrice").textContent = Math.floor(product.price - (product.price / 100) * product.discount);
-
-    //Berging
-
-    /* let currentPrice = Number(document.querySelector.price);
-    let discount = Number(document.querySelector.discount);
-    let totalValue = currentPrice * (discount / 100);
-    copy.querySelector(".produkt .newPrice").Number = product.totalValue; */
   }
+  // 7. appende (tilføje til dommen)
   document.querySelector("main").appendChild(copy);
 }
-// 7. appende (tilføje til dommen)
 
 /* 
   "id": 1163,

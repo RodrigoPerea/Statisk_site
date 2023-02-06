@@ -24,27 +24,28 @@ function showProduct(product) {
   // 6. skifte data
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector("h2").textContent = product.brandname;
-  copy.querySelector(".produkt .pris").textContent = product.price;
+  copy.querySelector(".pris").textContent = product.price;
+  /* copy.querySelector(".produkt .pris").textContent = Math.floor(product.price - (product.price / 100) * product.discount); */
   copy.querySelector(".under_line p").textContent = product.productdisplaynam;
 
   if (product.soldout > 0) {
-    copy.classList.add("udsolgt");
+    copy.querySelector(".produkt").classList.add("udsolgt");
   }
 
-  if (product.discount) {
-    copy.querySelector(".produkt").classList.add(".rabatProcent");
-    /* copy.querySelector(".produkt").classList.add(".rabatProcent"); */
+  if (product.discount > 0) {
+    copy.querySelector(".produkt").classList.add("rabatProcent");
+    copy.querySelector(".newPrice").textContent = Math.floor(product.price - (product.price / 100) * product.discount);
 
     //Berging
-    let currentPrice = Number(document.querySelector.price);
+
+    /* let currentPrice = Number(document.querySelector.price);
     let discount = Number(document.querySelector.discount);
     let totalValue = currentPrice * (discount / 100);
-    copy.querySelector(".produkt .newPrice").Number = product.totalValue;
+    copy.querySelector(".produkt .newPrice").Number = product.totalValue; */
   }
-
-  // 7. appende (tilføje til dommen)
   document.querySelector("main").appendChild(copy);
 }
+// 7. appende (tilføje til dommen)
 
 /* 
   "id": 1163,

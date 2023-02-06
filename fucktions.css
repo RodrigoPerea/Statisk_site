@@ -28,13 +28,13 @@
 /* UDSOLGT */
 
 .rabatProcent::before {
-  content: " ";
+  content: "-";
   width: 25%;
   height: 25%;
   background-color: rgb(109, 4, 4);
 }
 .rabatProcent::after {
-  content: " ";
+  content: "%";
   padding: 1rem;
   color: white;
   text-align: center;
@@ -42,7 +42,7 @@
 }
 
 .udsolgt::before {
-  content: " ";
+  /*  content: " "; */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -54,11 +54,13 @@
 }
 .udsolgt::after {
   content: "Udsolgt";
+  position: absolute;
   padding: 1rem;
-  background-color: rgba(87, 3, 3, 0.712);
+  background-color: rgba(255, 0, 0, 0.712);
   color: white;
   top: 0;
   right: 0;
+  z-index: 2000;
 }
 
 .gem {

@@ -22,8 +22,10 @@ function showProduct(product) {
   // 5. klone dem
   const copy = template.cloneNode(true);
   // 6. skifte data
+  copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector("h2").textContent = product.brandname;
   copy.querySelector(".produkt .pris").textContent = product.price;
+  copy.querySelector(".under_line p").textContent = product.productdisplaynam;
 
   if (product.soldout) {
     copy.querySelector(".produkt").classList.add("udsolgt");

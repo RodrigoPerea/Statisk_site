@@ -88,6 +88,15 @@
   text-align: center;
 }
 
+.category_test1 ul {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  place-items: center;
+  background-color: var(--custom_white);
+  height: calc(100% - 41px);
+}
+/* Kategori sortering */
+
 /* produktsite */
 .product_site {
   display: grid;
@@ -186,4 +195,10 @@ button.folder_menu {
   font-size: 1.1rem;
   justify-content: space-between;
   padding: 0.2rem;
+}
+.aditional_info h6::after {
+  content: ",- kr.";
+}
+.aditional_info h6::before {
+  content: "FØR: ";
 }

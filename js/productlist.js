@@ -1,5 +1,6 @@
-/* https://kea-alt-del.dk/t7/api/products */
-
+/* let cat = urlParams.get("category");
+let productCategorySelector = document.getElementById("categorySelector");
+ */
 // 1. hente data
 async function getData() {
   const response = await fetch("https://kea-alt-del.dk/t7/api/products?limit=500 "); //hentet data
@@ -24,7 +25,10 @@ function showProduct(product) {
   copy.querySelector("img").alt = product.productdisplayname;
   copy.querySelector("h2").textContent = product.brandname;
   copy.querySelector(".pris").textContent = product.price;
-  /* copy.querySelector(".produkt .pris").textContent = Math.floor(product.price - (product.price / 100) * product.discount); */
+  copy.querySelector("a").href = `produkt.html?id=${product.id}`;
+
+  /*   product_card_clone.querySelector("a").href = `product.html?id=${product.id}`; */
+
   copy.querySelector(".under_line p").textContent = product.productdisplayname;
 
   if (product.soldout > 0) {
@@ -37,26 +41,12 @@ function showProduct(product) {
     copy.querySelector(".newPrice").textContent = Math.floor(product.price - (product.price / 100) * product.discount);
     copy.querySelector(".pris").style.textDecoration = "line-through red";
   }
+  /*  if (cat !== null) {
+    productDataBase += `&category=${cat}`;
+    productCategorySelector.parentElement.style.display = "none";
+  } else if (productCategorySelector.value !== "null") {
+    productDataBase += `&category=${productCategorySelector.value}`;
+  } */
   // 7. appende (tilføje til dommen)
   document.querySelector("main").appendChild(copy);
 }
-
-/* 
-  "id": 1163,
-  "gender": "Men",
-  "category": "Apparel",
-  "subcategory": "Topwear",
-  "articletype": "Tshirts",
-  "season": "Summer",
-  "productionyear": 2011,
-  "usagetype": "Sports",
-  "productdisplayname": "Sahara Team India Fanwear Round Neck Jersey",
-  "price": 895,
-  "discount": null,
-  "brandname": "Nike",
-  "soldout": 0
-
-
-
-
-*/
